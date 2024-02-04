@@ -7,9 +7,8 @@ import teamRoute from "./Routes/team.js";
 import cookieParser from "cookie-parser";
 dotenv.config();
 
-const URL = process.env.MONGO || "mongodb://localhost:27017/";
-const ORIGIN = process.env.ORIGIN || "http://localhost:3000";
-const PORT = process.env.PORT || 4000;
+const ORIGIN = process.env.ORIGIN;
+const PORT = process.env.PORTp;
 
 
 const app = express();
