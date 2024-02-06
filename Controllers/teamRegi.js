@@ -1,6 +1,6 @@
 import Team from '../Models/TeamRegistration.js';
 
-const expectTeamCount = 15;
+// const expectTeamCount = 15;
 
 const teamCount = async () => {
   try {
@@ -23,15 +23,15 @@ export const register = async (req, res) => {
   // count teams and return if 50 teams are already registered
   const count = await teamCount();
 
-  if (count >= expectTeamCount) {
+  // if (count >= expectTeamCount) {
 
-    res.status(200).json({
-      success: false,
-      message: "Registration is currently closed because the maximum number of teams has been reached.",
-    });
-    return;
-  }
-  else {
+  //   res.status(200).json({
+  //     success: false,
+  //     message: "Registration is currently closed because the maximum number of teams has been reached.",
+  //   });
+  //   return;
+  // }
+  // else {
 
     try {
       const newSession = new Team({
@@ -65,7 +65,7 @@ export const register = async (req, res) => {
       res.send(err);
       console.log(err);
     }
-  }
+  // }
 };
 
 export const count = (req, res) => {
